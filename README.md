@@ -17,7 +17,7 @@ Login to `https://localhost:8080` with username as `admin` and temp admin passwo
 
 Next, create an example app in argocd to deploy your application via manifest or alternatively via argocd commandline
 
-`kubectl apply -f install/example-app.yaml `
+`kubectl apply -f apps/helm-guestbook.yaml `
 
 or
 
