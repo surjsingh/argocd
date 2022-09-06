@@ -8,6 +8,7 @@ Install full or core components
 
 ```
 kubectl create ns argocd
+kubectl create ns helm-guestbook
 kubectl apply -f install/install.yaml #fullversion
 kubectl apply -f install/core-install.yaml #onlycorecomponents
 kubectl port-forward svc/argocd-server -n argocd 8080:443
