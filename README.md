@@ -4,7 +4,7 @@
 
 ## Installation
 
-Install full or core components
+Install regular or ha or core setup
 
 ```
 kubectl create ns argocd
@@ -21,8 +21,26 @@ Next, create an example app in argocd to deploy your application via manifest or
 ```
 kubectl apply -f apps/helm-guestbook.yaml
 or
-argocd app create --name helm-guestbook \
+argocd app create \
+--name helm-guestbook \
+--project demo \
 --repo https://github.com/surjsingh/argocd.git \
 --dest-server https://kubernetes.default.svc \
---dest-namespace helm-guestbook --path helm-guestbook
+--dest-namespace helm-guestbook \
+--path helm-guestbook
+
+argocd app list
+argocd app get helm-guestbook
+argocd app sync helm-guestbook
+argocd app history helm-guestbook
+argocd app delete helm-guestbook
+```
+
+CLI Install
+
+```
+curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/v2.1.5/argocd-linux-amd64
+chmod +x /usr/local/bin/argocd
+
+argocd login localhost:8080 --insecure
 ```

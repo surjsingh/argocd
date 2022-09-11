@@ -11,7 +11,7 @@ spec:
     namespace: helm-guestbook
     server: https://kubernetes.default.svc
   source:
-    path: helm-guestbook
+    path: helm-app
     repoURL: https://github.com/surjsingh/argocd.git
     targetRevision: HEAD
   syncPolicy:
