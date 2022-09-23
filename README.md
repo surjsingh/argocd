@@ -23,11 +23,11 @@ kubectl apply -f apps/helm-guestbook.yaml
 or
 argocd app create \
 --name helm-guestbook \
---project demo \
+--project default \
 --repo https://github.com/surjsingh/argocd.git \
 --dest-server https://kubernetes.default.svc \
 --dest-namespace helm-guestbook \
---path helm-guestbook
+--path helm-app
 
 argocd app list
 argocd app get helm-guestbook
