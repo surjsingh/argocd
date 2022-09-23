@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: surjsingh/gitops-simple-app:v1.0
+  repository: docker.io/surjsingh/gitops-simple-app:v1.0
   tag: 0.1
   pullPolicy: IfNotPresent
 
